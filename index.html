@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติ้กต้อกอิงเองงงคร้าบ</title>
 
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000, #1c1c1c);
+            color: white;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .profile {
+            text-align: center;
+            cursor: pointer;
+            animation: fadeIn 1s ease forwards, float 3s ease-in-out infinite;
+        }
+
+        .profile:active {
+            transform: scale(0.95);
+        }
+
+        .profile img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #ff0050;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(255,0,80,0.5);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        p {
+            color: #ccc;
+            margin-top: 8px;
+        }
+
+        .tap {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ff0050;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes blink {
+            0%,100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.tiktok.com/@yuiau7" target="_blank">
+        <div class="profile">
+            <img src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/80f9a1cd59ebbcbd3fe505f26e011309~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=c2c06af6&x-expires=1770044400&x-signature=9TeG5yA%2ByR563hBOqeX%2BK45xlfk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my/150" alt="profile">
+            <h1>♡</h1>
+            <p>@yuiau7</p>
+            <div class="tap">ไปติ้กต้อกอิงเงออวแง</div>
+        </div>
+    </a>
+    <script>
+        // กันเบราว์เซอร์บางตัวไม่ยอม autoplay
+        const audio = document.getElementById("bgm");
+        audio.volume = 0.6;
+        document.addEventListener("click", () => {
+            audio.play();
+        }, { once: true });
+    </script>
+</body>
+</html>
